@@ -50,7 +50,7 @@ class UserProfile extends React.Component {
     if(e.charCode == 13){
       e.preventDefault();
       const newComments = this.state.comments;
-      newComments.push({"author": this.state.user.name, "comment": e.target.value})
+      newComments.push({"author": this.state.user.name + " " + this.state.user.surname, "comment": e.target.value})
       console.log(this.state.comments);
       this.setState({
         comments: newComments
@@ -87,7 +87,7 @@ class UserProfile extends React.Component {
                 <div className="userName">{this.state.user.name} {this.state.user.surname}</div>
                 <div className="userLocalization">{this.state.user.localization}</div>
               </div>
-              <img src="./images/likeBtn.png" alt="like" height="10.7px" width="12px" className="likeUser" onClick={e => this.addLike(e)}/>
+              <img src="./images/likeBtn.png" alt="like" height="15px" width="15px" className="likeUser" onClick={e => this.addLike(e)}/>
               <div className="infoPanel">
                 <div className="likes">
                   <div className="nrOfLikes">{this.state.userLikes}</div>

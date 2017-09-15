@@ -9850,7 +9850,7 @@ var UserProfile = function (_React$Component) {
       if (e.charCode == 13) {
         e.preventDefault();
         var newComments = _this.state.comments;
-        newComments.push({ "author": _this.state.user.name, "comment": e.target.value });
+        newComments.push({ "author": _this.state.user.name + " " + _this.state.user.surname, "comment": e.target.value });
         console.log(_this.state.comments);
         _this.setState({
           comments: newComments
@@ -9919,7 +9919,7 @@ var UserProfile = function (_React$Component) {
               this.state.user.localization
             )
           ),
-          _react2.default.createElement('img', { src: './images/likeBtn.png', alt: 'like', height: '10.7px', width: '12px', className: 'likeUser', onClick: function onClick(e) {
+          _react2.default.createElement('img', { src: './images/likeBtn.png', alt: 'like', height: '15px', width: '15px', className: 'likeUser', onClick: function onClick(e) {
               return _this2.addLike(e);
             } }),
           _react2.default.createElement(
@@ -11685,7 +11685,7 @@ module.exports = performanceNow;
 /* 100 */
 /***/ (function(module, exports) {
 
-module.exports = {"user1":{"name":"X","surname":"S","localization":"A","likes":121,"following":723,"followers":4433,"comments":[{"author":"One","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."},{"author":"Two","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."},{"author":"Three","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."}]}}
+module.exports = {"user1":{"name":"Harvey","surname":"S","localization":"New York, USA","likes":121,"following":723,"followers":4433,"comments":[{"author":"Mike Z","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."},{"author":"Luke X","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."},{"author":"Daniel Y","comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla enim, imperdiet sit amet suscipit commodo, lacinia ut eros. Etiam luctus consequat nibh, vel tristique neque rhoncus eu. Vestibulum sed metus sed elit gravida dapibus vitae sed risus. In id nisi eleifend, commodo justo eu, suscipit sapien."}]}}
 
 /***/ }),
 /* 101 */

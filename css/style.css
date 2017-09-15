@@ -109,7 +109,7 @@ body {
   }
 }
 .userNameLocalization {
-  width: 134px;
+  width: 100px;
   height: 37px;
   margin-top: 38px;
   margin-left: 18px;
@@ -120,7 +120,7 @@ body {
 @media (max-width: 768px) {
   .userNameLocalization {
     margin-top: 20px;
-    margin-left: 75px;
+    margin-left: 90px;
     text-align: center;
   }
 }
@@ -133,12 +133,12 @@ body {
   font-size: 12px;
 }
 .likeUser {
-  margin-top: 44px;
+  margin-top: 41px;
   margin-left: 10px;
 }
 @media (max-width: 768px) {
   .likeUser {
-    margin-left: 50px;
+    margin-left: 20px;
   }
 }
 
