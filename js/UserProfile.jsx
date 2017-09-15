@@ -16,34 +16,34 @@ class UserProfile extends React.Component {
   }
 
   addLike = (e) => {
-        e.preventDefault();
-        this.setState({
-          userLikes: this.state.userLikes + 1
-        });
-      }
+    e.preventDefault();
+    this.setState({
+      userLikes: this.state.userLikes + 1
+    });
+  }
 
   addFollower = (e) => {
-        e.preventDefault();
-        this.setState({
-          userFollowers: this.state.userFollowers + 1
-        });
-      }
+    e.preventDefault();
+    this.setState({
+      userFollowers: this.state.userFollowers + 1
+    });
+  }
 
   hideComments = (e) => {
-      e.preventDefault();
-      if (this.state.clicks == 1) {
-        this.setState({
-            commentsContainerClasses: 'comments hide',
-            commentInfo: 'Show comments',
-            clicks: 2
-        });
-      } else {
-        this.setState({
-            commentsContainerClasses: 'comments',
-            commentInfo: 'Hide comments',
-            clicks: 1
-        });
-     }
+    e.preventDefault();
+    if (this.state.clicks == 1) {
+      this.setState({
+        commentsContainerClasses: 'comments hide',
+        commentInfo: 'Show comments',
+        clicks: 2
+      });
+    } else {
+      this.setState({
+        commentsContainerClasses: 'comments',
+        commentInfo: 'Hide comments',
+        clicks: 1
+      });
+    }
   }
 
   addComment = (e) => {
@@ -59,7 +59,7 @@ class UserProfile extends React.Component {
     }
   }
 
-    render() {
+  render() {
 
 
     var commentsArray = this.state.comments.map((element, i) => {
@@ -76,48 +76,48 @@ class UserProfile extends React.Component {
       )
     });
 
-        return (
-          <div className='container'>
-            <div className='topPanel'></div>
-            {console.log(this.state.comments)}
-            <div className='userInfo'>
-              <img src="./images/goBackBtn.png" alt="go back" height="10.1px" width="10.1px" className="goBackBtn"/>
-              <img src="./images/userImage.png" alt="user image" height="70px" width="70px" className="userImg"/>
-              <div className="userNameLocalization">
-                <div className="userName">{this.state.user.name} {this.state.user.surname}</div>
-                <div className="userLocalization">{this.state.user.localization}</div>
-              </div>
-              <img src="./images/likeBtn.png" alt="like" height="15px" width="15px" className="likeUser" onClick={e => this.addLike(e)}/>
-              <div className="infoPanel">
-                <div className="likes">
-                  <div className="nrOfLikes">{this.state.userLikes}</div>
-                  <div>Likes</div>
-                </div>
-                <div className="divideLine"></div>
-                <div className="following">
-                  <div className="nrOfFollowing">{this.state.user.following}</div>
-                  <div>Following</div>
-                </div>
-                <div className="divideLine"></div>
-                <div className="followers">
-                  <div className="nrOfFollowers">{this.state.userFollowers}</div>
-                  <div>Followers</div>
-                </div>
-                <div className="followBtn" onClick={e => this.addFollower(e)}>
-                  <div className="followBtnText">Follow</div>
-                </div>
-              </div>
+    return (
+      <div className='container'>
+        <div className='topPanel'></div>
+        {console.log(this.state.comments)}
+        <div className='userInfo'>
+          <img src="./images/goBackBtn.png" alt="go back" height="10.1px" width="10.1px" className="goBackBtn"/>
+          <img src="./images/userImage.png" alt="user image" height="70px" width="70px" className="userImg"/>
+          <div className="userNameLocalization">
+            <div className="userName">{this.state.user.name} {this.state.user.surname}</div>
+            <div className="userLocalization">{this.state.user.localization}</div>
+          </div>
+          <img src="./images/likeBtn.png" alt="like" height="15px" width="15px" className="likeUser" onClick={e => this.addLike(e)}/>
+          <div className="infoPanel">
+            <div className="likes">
+              <div className="nrOfLikes">{this.state.userLikes}</div>
+              <div>Likes</div>
             </div>
-            <div className={this.state.commentsContainerClasses}>
-              <div className="hideComments" onClick={e => this.hideComments(e)}>{this.state.commentInfo} ({this.state.comments.length})</div>
-              {commentsArray}
-              <input type='text' placeholder='Add a comment' onKeyPress={e => this.addComment(e)}></input>
-              <div className="divideLine3"></div>
+            <div className="divideLine"></div>
+            <div className="following">
+              <div className="nrOfFollowing">{this.state.user.following}</div>
+              <div>Following</div>
+            </div>
+            <div className="divideLine"></div>
+            <div className="followers">
+              <div className="nrOfFollowers">{this.state.userFollowers}</div>
+              <div>Followers</div>
+            </div>
+            <div className="followBtn" onClick={e => this.addFollower(e)}>
+              <div className="followBtnText">Follow</div>
             </div>
           </div>
-        );
-     }
+        </div>
+        <div className={this.state.commentsContainerClasses}>
+          <div className="hideComments" onClick={e => this.hideComments(e)}>{this.state.commentInfo} ({this.state.comments.length})</div>
+          {commentsArray}
+          <input type='text' placeholder='Add a comment' onKeyPress={e => this.addComment(e)}></input>
+          <div className="divideLine3"></div>
+        </div>
+      </div>
+    );
   }
+}
 
 
 export default UserProfile;
